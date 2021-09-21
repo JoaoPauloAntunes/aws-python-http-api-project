@@ -1,0 +1,39 @@
+org: joaopauloantunes
+app: aws-python-http-api-project
+service: aws-python-http-api-project
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: sa-east-1
+  # stage: ${self:custom.currentStage}
+  stage: dev
+  lambdaHashingVersion: '20201221'
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get
+  sum:
+    handler: handler.sum
+    events:
+      - http:
+          path: /
+          method: post
+  update_user:
+    handler: handler.update_user
+    events:
+      - http:
+          path: /users/{user_id}
+          method: put
+  delete_user:
+    handler: handler.delete_user
+    events:
+      - http:
+          path: /users/{user_id}
+          method: delete
+  
