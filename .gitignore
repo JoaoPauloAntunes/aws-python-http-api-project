@@ -18,3 +18,20 @@ var/
 
 # Serverless directories
 .serverless
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# DynamoDB Local files
+.dynamodb/
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
