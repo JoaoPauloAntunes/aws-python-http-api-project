@@ -9,6 +9,7 @@ provider:
   region: sa-east-1
   # stage: ${self:custom.currentStage}
   stage: dev
+  # Uses improved resolution of lambda version hashes (see: https://www.serverless.com/framework/docs/deprecations/#default-providerlambdahashingversion)
   lambdaHashingVersion: '20201221'
 
 functions:
